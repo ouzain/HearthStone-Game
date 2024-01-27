@@ -1,31 +1,17 @@
 package com.myproject.hearthstone;
 
-public class Champion implements SpecialAbility {
-    protected int id;
-    protected String name;
-    protected int healthPoints;
-    protected SpecialAbility specialAbility;
+public class Champion extends Entity implements SpecialAbility {
+    protected String specialAbility;
 
-    public Champion (int id, String name, int healthPoints){
-        this.id=id;
-        this.healthPoints=healthPoints;
-        this.name=name;
+    public Champion (int id, String name, int healthPoints, String specialAbility){
+        super(id, name, healthPoints);
+        
+       
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getHealthPoints() {
-        return healthPoints ;
-    }
-
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints =healthPoints ;
+    
+    public String setSpecialAbility(String specialAbility ){
+        return specialAbility;
     }
     
     @Override

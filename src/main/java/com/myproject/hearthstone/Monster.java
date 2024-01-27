@@ -1,33 +1,28 @@
 package com.myproject.hearthstone;
+import java.util.Random;
 
-public class Monster {
-    protected int id;
-    protected String name;
-    protected int healthPoints;
+public class Monster extends Entity{
+    public enum MonsterType {
+        CLASSIC, PROTECTOR, HEALER, MASCOT, OTHER,
+    
+    }
+
     protected int attackPoints;
+    protected MonsterType monsterType;
 
     public Monster(int id, String name, int healthPoints, int attackPoints){
-        this.id=id;
-        this.name=name;
+       super(id, name, healthPoints);
         this.attackPoints=attackPoints;
-        this.healthPoints=healthPoints;
+        this.monsterType=setMonsterType();
         
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getHealthPoints() {
-        return healthPoints ;
-    }
-
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints =healthPoints ;
+    public MonsterType setMonsterType() {
+        Random random = new Random();
+        int randomIndex = random.nextInt(MonsterType.values().length);
+        return MonsterType.values()[randomIndex];
+        
     }
 
 }
