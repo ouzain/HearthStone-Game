@@ -1,9 +1,9 @@
 package com.myproject.hearthstone;
 import java.util.Random;
 
-public class Monster extends Entity{
+public class Monster extends Entity implements MonsterTurnBehavior{
     public enum MonsterType {
-        CLASSIC, PROTECTOR, HEALER, MASCOT, OTHER,
+        CLASSIC, PROTECTOR, HEALER, MASCOT,
     
     }
 
@@ -17,11 +17,27 @@ public class Monster extends Entity{
         
     }
 
+    public MonsterType getMonsterType(Monster monster){
+        return monster.monsterType;
+    }
 
     public MonsterType setMonsterType() {
-        Random random = new Random();
+       Random random = new Random();
         int randomIndex = random.nextInt(MonsterType.values().length);
         return MonsterType.values()[randomIndex];
+        
+        
+        
+    }
+
+    public int getAttackpoints(){
+        return this.attackPoints;
+    }
+
+   
+    @Override
+    public void performTurnAction() {
+        // TODO Auto-generated method stub
         
     }
 

@@ -1,5 +1,10 @@
 package com.myproject.hearthstone;
 
 public interface MonsterTurnBehavior {
-    void performTurnAction();
+    public void performTurnAction();
+    //public void attack();
+    //public void undergoAnAttack();
+    //public void heal();
+    //public void defend();
+    //public void boost();
 }

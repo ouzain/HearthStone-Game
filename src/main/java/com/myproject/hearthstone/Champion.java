@@ -1,5 +1,6 @@
 package com.myproject.hearthstone;
 
+
 public class Champion extends Entity implements SpecialAbility {
     protected String specialAbility;
 
@@ -13,9 +14,16 @@ public class Champion extends Entity implements SpecialAbility {
     public String setSpecialAbility(String specialAbility ){
         return specialAbility;
     }
+
+    public Monster placeCard(Card card) {
+       
+       return card.invokMonster();
+        
+    
+    }
     
     @Override
     public void useAbility(){
-        System.out.println("Voici mon pouvoir spéciale");
+        System.out.println("Voici mon pouvoir spéciale : " + specialAbility);
     }
 }
