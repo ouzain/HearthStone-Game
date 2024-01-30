@@ -17,8 +17,8 @@ public class Monster extends Entity implements MonsterTurnBehavior{
         
     }
 
-    public MonsterType getMonsterType(Monster monster){
-        return monster.monsterType;
+    public MonsterType getMonsterType(){
+        return this.monsterType;
     }
 
     public MonsterType setMonsterType() {

@@ -1,0 +1,8 @@
+com\myproject\hearthstone\Monster.class
+com\myproject\hearthstone\SpecialAbility.class
+com\myproject\hearthstone\Card.class
+com\myproject\hearthstone\MonsterTurnBehavior.class
+com\myproject\hearthstone\Main.class
+com\myproject\hearthstone\Entity.class
+com\myproject\hearthstone\Monster$MonsterType.class
+com\myproject\hearthstone\Champion.class
